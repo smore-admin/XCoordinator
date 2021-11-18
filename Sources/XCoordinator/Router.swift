@@ -83,9 +83,10 @@ extension Router {
             contextTrigger(route, with: options) { _ in completion?() }
         }
     }
+
 }
 
-extension Router where Self: Presentable {
+extension Router {
 
     // MARK: Computed properties
 
@@ -112,4 +113,5 @@ extension Router where Self: Presentable {
     public func router<R: Route>(for route: R) -> StrongRouter<R>? {
         strongRouter as? StrongRouter<R>
     }
+
 }
