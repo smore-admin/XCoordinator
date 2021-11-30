@@ -72,7 +72,7 @@ extension Coordinator {
     }
 }
 
-extension Coordinator where Self: Presentable & AnyObject {
+extension Coordinator where Self: AnyObject {
 
     ///
     /// Creates a WeakRouter object from the given router to abstract from concrete implementations
@@ -133,10 +133,10 @@ extension Coordinator where Self: AnyObject {
     public func performTransition(_ transition: TransitionType,
                                   with options: TransitionOptions,
                                   completion: PresentationHandler? = nil) {
-        transition.presentables.forEach(addChild)
         transition.perform(on: rootViewController, with: options) {
             completion?()
             self.removeChildrenIfNeeded()
+            transition.presentables.forEach(self.addChild)
         }
     }
 }
