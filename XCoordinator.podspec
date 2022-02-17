@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
     spec.name         = 'XCoordinator'
-    spec.version      = '1.6.0'
+    spec.version      = '1.6.1'
     spec.license      = { :type => 'MIT' }
-    spec.homepage     = 'https://github.com/quickbirdstudios/XCoordinator'
+    spec.homepage     = 'https://github.com/smore-admin/XCoordinator'
     spec.authors      = { 'Stefan Kofler' => 'stefan.kofler@quickbirdstudios.com', 'Paul Kraft' => 'pauljohannes.kraft@quickbirdstudios.com' }
     spec.summary      = 'Navigation framework based on coordinator pattern.'
-    spec.source       = { :git => 'https://github.com/quickbirdstudios/XCoordinator.git', :tag => spec.version }
+    spec.source       = { :git => 'https://github.com/smore-admin/XCoordinator.git', :tag => spec.version }
     spec.module_name = 'XCoordinator'
     spec.swift_version = '5.0'
     spec.ios.deployment_target = '8.0'
