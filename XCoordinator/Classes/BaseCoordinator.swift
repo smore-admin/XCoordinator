@@ -92,7 +92,7 @@ open class BaseCoordinator<RouteType: Route, TransitionType: TransitionProtocol>
     // MARK: - Private methods
 
     private func performTransitionAfterWindowAppeared(_ transition: TransitionType) {
-        guard UIApplication.shared.keyWindow == nil else {
+        guard UIApplication.shared.windows.first(where: \.isKeyWindow) == nil else {
             return performTransition(transition, with: TransitionOptions(animated: false))
         }
 
