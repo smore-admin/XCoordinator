@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name         = 'XCoordinator'
-    spec.version      = '1.6.1'
+    spec.version      = '1.6.2'
     spec.license      = { :type => 'MIT' }
     spec.homepage     = 'https://github.com/smore-admin/XCoordinator'
     spec.authors      = { 'Stefan Kofler' => 'stefan.kofler@quickbirdstudios.com', 'Paul Kraft' => 'pauljohannes.kraft@quickbirdstudios.com' }
@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'RxSwift' do |ss|
         ss.dependency 'XCoordinator/Core'
-        ss.dependency 'RxSwift', '~> 5.0'
+        ss.dependency 'RxSwift', '~> 6.0'
 
         ss.source_files = 'XCoordinator/Classes/RxSwift/*.swift'
     end
